@@ -24,7 +24,7 @@ Based on these data density probability is estimated for each pair using multiva
 On this step filter allows to "survive" particles according their weights. The higher the weight the higher likelihood for particle to "survive" in resampling process.
 It is performed by a discrete distribution function of C++ standard library, which helps to randomly generate indexes of the array based on the array probability values.
 
-[image1]: ./images/output_video.gif
+[image1]: ./output_video.gif
 
 Example of the filter performance on the simulator
 
