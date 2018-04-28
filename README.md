@@ -33,9 +33,11 @@ Example of the filter performance on the simulator
 ## Success Criteria
 
 1. **Accuracy**:  particle filter should localize vehicle position and yaw to within the values specified in the parameters `max_translation_error` and `max_yaw_error` in `src/main.cpp`.
+
 The particle filter passes the accuracy with error values x: 0.170 y: 0.180 yaw: 0.006
 
 2. **Performance**: your particle filter should complete execution within the time of 100 seconds.
+
 The particle filter passes the prformance by completing in 60 seconds
 
 
