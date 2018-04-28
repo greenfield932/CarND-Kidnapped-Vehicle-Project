@@ -43,6 +43,7 @@ int main()
 	  return -1;
   }
 
+  cout<<std::fixed << std::setw( 5 ) << std::setprecision( 16 );
   // Create particle filter
   ParticleFilter pf;
 
@@ -129,7 +130,7 @@ int main()
 		  }
 		  cout << "highest w " << highest_weight << endl;
 		  cout << "average w " << weight_sum/num_particles << endl;
-
+		  cout << "weight sum " << weight_sum << endl;
           json msgJson;
           msgJson["best_particle_x"] = best_particle.x;
           msgJson["best_particle_y"] = best_particle.y;
