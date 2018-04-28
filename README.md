@@ -2,16 +2,16 @@
 
 This project implements a 2 dimensional particle filter in C++. Particle filter performs localization of the vehicle based on landmarks and initial information about vehicle position and orientation. The filter performs the following steps:
 
-* Initialization
+* **Initialization**
 
 Initial localization information provided by the simulator and set to particles with noise.
 
-* Prediction
+* **Prediction**
 
 Each particle is representing possible position of a car. On this step we make a prediction for each particle of the next car position and orientation based on the process model. 
 Position of each particle will be highly likely different due to noise introduced by normal distribution as addition after the prediction.
 
-* Update
+* **Update**
 
 Update step performed with measurement data. On this step filter gets information about the observations of landmarks from the sensors. Each landmark observation has noisy coordinates of the 
 observed map landmarks. Filter performs coordinate transformation for each observation, this is required since measurement of the sensor is performed in the car's coordinate system while landmakrs are in the map coordinate system. Next a set of landmarks is selected from the map according to a particle's position and sensor range measurement.
@@ -19,7 +19,7 @@ Now filter have 2 vectors of observable landmarks and found observations from th
 search in 2 vectors to find pairs of nearest map landmark and observed landmark.
 Based on these data density probability is estimated for each pair using multivariate gaussian probability. Final weight of particle is defined as a multiplication of these density probabilities.
 
-* Resample
+* **Resample**
 
 On this step filter allows to "survive" particles according their weights. The higher the weight the higher likelihood for particle to "survive" in resampling process.
 It is performed by a discrete distribution function of C++ standard library, which helps to randomly generate indexes of the array based on the array probability values.
