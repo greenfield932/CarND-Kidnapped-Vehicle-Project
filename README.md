@@ -17,10 +17,10 @@ Update step performed with measurement data. On this step filter gets informatio
 observed map landmarks. Filter performs coordinate transformation for each observation, this is required since measurement of the sensor is performed in the car's coordinate system while landmakrs are in the map coordinate system. Next a set of landmarks is selected from the map according to a particle's position and sensor range measurement.
 Now filter have 2 vectors of observable landmarks and found observations from the sensors. Filter performs data association based on nearest neighbour algorithm. In other words filter
 search in 2 vectors to find pairs of nearest map landmark and observed landmark.
-Based on these data density probability is estimated for each pair using multivariate gaussian probability. Final weight of partical is defined as a multiplication of these density probabilities.
+Based on these data density probability is estimated for each pair using multivariate gaussian probability. Final weight of particle is defined as a multiplication of these density probabilities.
 
 * Resample
-On this step filter allows to "survive" particles according their weights. The higher the weight the higher likelihood for partical to survive.
+On this step filter allows to "survive" particles according their weights. The higher the weight the higher likelihood for particle to "survive" in resampling process.
 It is performed by a discrete distribution function of C++ standard library, which helps to randomly generate indexes of the array based on the array probability values.
 
 [image1]: ./images/output_video.gif
