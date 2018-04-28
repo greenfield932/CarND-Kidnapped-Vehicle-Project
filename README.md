@@ -1,9 +1,10 @@
 # Kidnapped Vehicle (Particle Filter) project
 
-This project implements a 2 dimensional particle filter in C++. Particle filter uses a set of landmarks on a map and initial localization information (analogous to what a GPS would provide).
-The filter performs the following steps:
+This project implements a 2 dimensional particle filter in C++. Particle filter performs localization of the vehicle based on landmarks and initial information about vehicle position and orientation. The filter performs the following steps:
 
 * Initialization
+
+Initial localization information provided by the simulator and set to particles with noise.
 
 * Prediction
 
