@@ -20,6 +20,7 @@ search in 2 vectors to find pairs of nearest map landmark and observed landmark.
 Based on these data density probability is estimated for each pair using multivariate gaussian probability. Final weight of particle is defined as a multiplication of these density probabilities.
 
 * Resample
+
 On this step filter allows to "survive" particles according their weights. The higher the weight the higher likelihood for particle to "survive" in resampling process.
 It is performed by a discrete distribution function of C++ standard library, which helps to randomly generate indexes of the array based on the array probability values.
 
