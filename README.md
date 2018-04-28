@@ -15,7 +15,7 @@ Position of each particle will be highly likely different due to noise introduce
 
 Update step performed with measurement data. On this step filter gets information about the observations of landmarks from the sensors. Each landmark observation has noisy coordinates of the 
 observed map landmarks. Filter performs coordinate transformation for each observation, this is required since measurement of the sensor is performed in the car's coordinate system while landmakrs are in the map coordinate system. Next a set of landmarks is selected from the map according to a particle's position and sensor range measurement.
-Now filter have 2 vectors of observable landmarks of the map and found observations from the sensors. Filter performs data association based on nearest neighbour algorithm. In other words filter
+Now filter have 2 vectors of observable landmarks and found observations from the sensors. Filter performs data association based on nearest neighbour algorithm. In other words filter
 search in 2 vectors to find pairs of nearest map landmark and observed landmark.
 Based on these data density probability is estimated for each pair using mulrivariate gaussian probability. Final weight of partical is defined as a multiplication of these density probabilities.
 
