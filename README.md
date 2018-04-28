@@ -22,6 +22,12 @@ Based on these data density probability is estimated for each pair using mulriva
 On this step filter allows to "survive" particles according their weights. The higher the weight the higher likelihood for partical to survive.
 It is performed by a discrete distribution function of C++ standard library, which helps to randomly generate indexes of the array based on the array probability values.
 
+[image1]: ./images/output_video.gif
+
+Example of the filter performance on the simulator
+
+![alt text][image1]
+
 ## Success Criteria
 
 1. **Accuracy**:  particle filter should localize vehicle position and yaw to within the values specified in the parameters `max_translation_error` and `max_yaw_error` in `src/main.cpp`.
